@@ -89,23 +89,23 @@ if dein#tap('emmet-vim')
 		\ | imap <buffer> <C-Return> <Plug>(emmet-expand-abbr)
 endif
 
-if dein#tap('vim-operator-surround')
-	map <silent>sa <Plug>(operator-surround-append)
-	map <silent>sd <Plug>(operator-surround-delete)
-	map <silent>sr <Plug>(operator-surround-replace)
-	nmap <silent>saa <Plug>(operator-surround-append)<Plug>(textobj-multiblock-i)
-	nmap <silent>sdd <Plug>(operator-surround-delete)<Plug>(textobj-multiblock-a)
-	nmap <silent>srr <Plug>(operator-surround-replace)<Plug>(textobj-multiblock-a)
-endif
+" if dein#tap('vim-operator-surround')
+" 	map <silent>sa <Plug>(operator-surround-append)
+" 	map <silent>sd <Plug>(operator-surround-delete)
+" 	map <silent>sr <Plug>(operator-surround-replace)
+" 	nmap <silent>saa <Plug>(operator-surround-append)<Plug>(textobj-multiblock-i)
+" 	nmap <silent>sdd <Plug>(operator-surround-delete)<Plug>(textobj-multiblock-a)
+" 	nmap <silent>srr <Plug>(operator-surround-replace)<Plug>(textobj-multiblock-a)
+" endif
 
-if dein#tap('vim-operator-replace')
-	xmap p <Plug>(operator-replace)
-endif
+" if dein#tap('vim-operator-replace')
+" 	xmap p <Plug>(operator-replace)
+" endif
 
-if dein#tap('vim-operator-flashy')
-	map y <Plug>(operator-flashy)
-	nmap Y <Plug>(operator-flashy)$
-endif
+" if dein#tap('vim-operator-flashy')
+" 	map y <Plug>(operator-flashy)
+" 	nmap Y <Plug>(operator-flashy)$
+" endif
 
 if dein#tap('vim-niceblock')
 	xmap I  <Plug>(niceblock-I)
@@ -273,6 +273,7 @@ if dein#tap('vim-expand-region')
 	xmap V <Plug>(expand_region_shrink)
 endif
 
+" TODO: Experiment with this
 if dein#tap('sideways.vim')
 	nnoremap <silent> m" :SidewaysJumpLeft<CR>
 	nnoremap <silent> m' :SidewaysJumpRight<CR>
@@ -282,6 +283,7 @@ if dein#tap('sideways.vim')
 	xmap <silent> i, <Plug>SidewaysArgumentTextobjI
 endif
 
+" TODO: Experiment with this
 if dein#tap('splitjoin.vim')
 	let g:splitjoin_join_mapping = ''
 	let g:splitjoin_split_mapping = ''
@@ -289,6 +291,7 @@ if dein#tap('splitjoin.vim')
 	nmap sk :SplitjoinSplit<CR>
 endif
 
+" TODO: Experiment with this
 if dein#tap('linediff.vim')
 	vnoremap ,df :Linediff<CR>
 	vnoremap ,da :LinediffAdd<CR>
@@ -296,6 +299,7 @@ if dein#tap('linediff.vim')
 	nnoremap ,dr :<C-u>LinediffReset<CR>
 endif
 
+" TODO: Experiment with this
 if dein#tap('dsf.vim')
 	nmap dsf <Plug>DsfDelete
 	nmap csf <Plug>DsfChange
@@ -326,18 +330,18 @@ if dein#tap('vim-easymotion')
 	map  sp <Plug>(easymotion-prev)
 endif
 
-if dein#tap('vim-textobj-multiblock')
-	omap <silent> ab <Plug>(textobj-multiblock-a)
-	omap <silent> ib <Plug>(textobj-multiblock-i)
-	xmap <silent> ab <Plug>(textobj-multiblock-a)
-	xmap <silent> ib <Plug>(textobj-multiblock-i)
-endif
+" if dein#tap('vim-textobj-multiblock')
+" 	omap <silent> ab <Plug>(textobj-multiblock-a)
+" 	omap <silent> ib <Plug>(textobj-multiblock-i)
+" 	xmap <silent> ab <Plug>(textobj-multiblock-a)
+" 	xmap <silent> ib <Plug>(textobj-multiblock-i)
+" endif
 
-if dein#tap('vim-textobj-function')
-	omap <silent> af <Plug>(textobj-function-a)
-	omap <silent> if <Plug>(textobj-function-i)
-	xmap <silent> af <Plug>(textobj-function-a)
-	xmap <silent> if <Plug>(textobj-function-i)
-endif
+" if dein#tap('vim-textobj-function')
+" 	omap <silent> af <Plug>(textobj-function-a)
+" 	omap <silent> if <Plug>(textobj-function-i)
+" 	xmap <silent> af <Plug>(textobj-function-a)
+" 	xmap <silent> if <Plug>(textobj-function-i)
+" endif
 
 " vim: set ts=2 sw=2 tw=80 noet :

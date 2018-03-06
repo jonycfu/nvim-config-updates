@@ -439,14 +439,14 @@
 #   depends: [ vim-operator-user, vim-textobj-multiblock ]
 #   on_map: { vnx: <Plug> }
 
-- repo: haya14busa/vim-operator-flashy
-  depends: vim-operator-user
-  on_map: { nx: <Plug> }
+# - repo: haya14busa/vim-operator-flashy
+#   depends: vim-operator-user
+#   on_map: { nx: <Plug> }
 
 # ==========================================
 # Text objects
 # ------------
-- { repo: kana/vim-textobj-user, on_func: textobj#user# }
+# - { repo: kana/vim-textobj-user, on_func: textobj#user# }
 - { repo: terryma/vim-expand-region, on_map: { x: <Plug> }}
 - { repo: AndrewRadev/sideways.vim, on_map: { ox: <Plug>Sideways }}
 - { repo: AndrewRadev/splitjoin.vim, on_map: { n: <Plug>Splitjoin }}
@@ -456,14 +456,14 @@
   on_map: { n: <Plug>Dsf }
   hook_add: let g:dsf_no_mappings = 1
 
-- repo: osyo-manga/vim-textobj-multiblock
-  depends: vim-textobj-user
-  on_map: { ox: <Plug> }
-  hook_add: let g:textobj_multiblock_no_default_key_mappings = 1
+# - repo: osyo-manga/vim-textobj-multiblock
+#   depends: vim-textobj-user
+#   on_map: { ox: <Plug> }
+#   hook_add: let g:textobj_multiblock_no_default_key_mappings = 1
 
-- repo: kana/vim-textobj-function
-  depends: vim-textobj-user
-  on_map: { ox: <Plug> }
-  hook_add: let g:textobj_function_no_default_key_mappings = 1
+# - repo: kana/vim-textobj-function
+#   depends: vim-textobj-user
+#   on_map: { ox: <Plug> }
+#   hook_add: let g:textobj_function_no_default_key_mappings = 1
 
 #  vim: set ts=2 sw=2 tw=80 et :
