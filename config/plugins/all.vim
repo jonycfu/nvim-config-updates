@@ -54,7 +54,7 @@ if dein#tap('vim-denite-z')
 endif
 
 if dein#tap('tagbar')
-	nnoremap <silent> <Leader>o   :<C-u>TagbarOpenAutoClose<CR>
+nnoremap <silent> <Leader>o   :<C-u>TagbarOpenAutoClose<CR>
 
 	" Also use h/l to open/close folds
 	let g:tagbar_map_closefold = ['h', '-', 'zc']
@@ -62,17 +62,17 @@ if dein#tap('tagbar')
 endif
 
 if dein#tap('nerdtree')
-	let g:NERDTreeMapOpenSplit = 'sv'
-	let g:NERDTreeMapOpenVSplit = 'sg'
-	let g:NERDTreeMapOpenInTab = 'st'
-	let g:NERDTreeMapOpenInTabSilent = 'sT'
+	let g:NERDTreeMapOpenSplit = 'o'
+	let g:NERDTreeMapOpenVSplit = 'O'
+	let g:NERDTreeMapOpenInTab = 't'
+	let g:NERDTreeMapOpenInTabSilent = 'T'
 	let g:NERDTreeMapUpdirKeepOpen = '<BS>'
-	let g:NERDTreeMapOpenRecursively = 't'
-	let g:NERDTreeMapCloseChildren = 'T'
+	" let g:NERDTreeMapOpenRecursively = 't'
+	" let g:NERDTreeMapCloseChildren = 'T'
 	let g:NERDTreeMapToggleHidden = '.'
 
-	nnoremap <silent> <LocalLeader>e :<C-u>NERDTreeToggle<CR>
-	nnoremap <silent> <LocalLeader>a :<C-u>NERDTreeFind<CR>
+	nnoremap <silent> <LocalLeader>nn :<C-u>NERDTreeToggle<CR>
+	nnoremap <silent> <LocalLeader>nf :<C-u>NERDTreeFind<CR>
 endif
 
 if dein#tap('neosnippet.vim')

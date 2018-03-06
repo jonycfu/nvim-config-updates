@@ -8,7 +8,7 @@ let g:NERDTreeCascadeSingleChildDir = 0
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeRespectWildIgnore = 0
 let g:NERDTreeAutoDeleteBuffer = 0
-let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeQuitOnOpen = 0
 let g:NERDTreeHijackNetrw = 1
 let g:NERDTreeBookmarksFile = $VARPATH.'/treemarks'
 let NERDTreeIgnore = [
@@ -71,7 +71,7 @@ endfunction
 " Plugin: Open diff split on current file {{{
 " ---
 call NERDTreeAddKeyMap({
-	\ 'key': 'gd',
+	\ 'key': ',d',
 	\ 'callback': s:SNR.'diff',
 	\ 'quickhelpText': 'open diff on current file',
 	\ 'scope': 'FileNode' })
@@ -87,12 +87,12 @@ endfunction
 " Plugin: Jump to project root / user home {{{
 " ---
 call NERDTreeAddKeyMap({
-	\ 'key': '&',
+	\ 'key': ',r',
 	\ 'callback': s:SNR.'jump_project_root',
 	\ 'quickhelpText': 'Open current git root' })
 
 call NERDTreeAddKeyMap({
-	\ 'key': 'gh',
+	\ 'key': ',h',
 	\ 'callback': s:SNR.'jump_home',
 	\ 'quickhelpText': 'open user home directory' })
 
@@ -117,7 +117,7 @@ endfunction
 " Plugin: Create a new file or dir in path {{{
 " ---
 call NERDTreeAddKeyMap({
-	\ 'key': 'N',
+	\ 'key': 'mm',
 	\ 'callback': s:SNR.'create_in_path',
 	\ 'quickhelpText': 'Create file or dir',
 	\ 'scope': 'Node' })

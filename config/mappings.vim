@@ -40,15 +40,16 @@ nnoremap <leader>a =ip
 " nnoremap x "_x
 
 " Toggle fold
-nnoremap <CR> za
+" nnoremap <CR> za
 
 " Focus the current fold by closing all others
-nnoremap <S-Return> zMza
+" nnoremap <S-Return> zMza
 
 " Use backspace key for matchit.vim
 nmap <BS> %
 xmap <BS> %
 
+" Allow for tabbing between open buffers/splits
 nmap <Tab>  <C-w>w
 nmap <S-Tab>  <C-w>W
 
@@ -68,7 +69,7 @@ cnoreabbrev Bd bd
 cnoreabbrev bD bd
 
 " Start new line from any cursor position
-inoremap <S-Return> <C-o>o
+" inoremap <S-Return> <C-o>o
 
 " Quick substitute within selected area
 xnoremap s :s//g<Left><Left>
@@ -77,18 +78,20 @@ nnoremap zl z5l
 nnoremap zh z5h
 
 " Improve scroll, credits: https://github.com/Shougo
-nnoremap <expr> zz (winline() == (winheight(0)+1) / 2) ?
-	\ 'zt' : (winline() == 1) ? 'zb' : 'zz'
-noremap <expr> <C-f> max([winheight(0) - 2, 1])
-	\ ."\<C-d>".(line('w$') >= line('$') ? "L" : "M")
-noremap <expr> <C-b> max([winheight(0) - 2, 1])
-	\ ."\<C-u>".(line('w0') <= 1 ? "H" : "M")
-noremap <expr> <C-e> (line("w$") >= line('$') ? "j" : "3\<C-e>")
-noremap <expr> <C-y> (line("w0") <= 1         ? "k" : "3\<C-y>")
+" nnoremap <expr> zz (winline() == (winheight(0)+1) / 2) ?
+" 	\ 'zt' : (winline() == 1) ? 'zb' : 'zz'
+" noremap <expr> <C-f> max([winheight(0) - 2, 1])
+" 	\ ."\<C-d>".(line('w$') >= line('$') ? "L" : "M")
+" noremap <expr> <C-b> max([winheight(0) - 2, 1])
+" 	\ ."\<C-u>".(line('w0') <= 1 ? "H" : "M")
+" noremap <expr> <C-e> (line("w$") >= line('$') ? "j" : "3\<C-e>")
+" noremap <expr> <C-y> (line("w0") <= 1         ? "k" : "3\<C-y>")
 
 " Window control
-nnoremap <C-q> <C-w>
+" nnoremap <C-q> <C-w>
+" Swap windows
 nnoremap <C-x> <C-w>x
+" Close current window
 nnoremap <silent><C-w>z :vert resize<CR>:resize<CR>:normal! ze<CR>
 
 " Select blocks after indenting
@@ -191,9 +194,9 @@ function! s:get_selection(cmdtype) "{{{
 endfunction "}}}
 
 " Background dark/light toggle and contrasts
-nnoremap <silent><Leader>b :<C-u>call <SID>toggle_background()<CR>
-nmap <silent> s- :<c-u>call <SID>toggle_contrast(-v:count1)<cr>
-nmap <silent> s= :<c-u>call <SID>toggle_contrast(+v:count1)<cr>
+" nnoremap <silent><Leader>b :<C-u>call <SID>toggle_background()<CR>
+" nmap <silent> s- :<c-u>call <SID>toggle_contrast(-v:count1)<cr>
+" nmap <silent> s= :<c-u>call <SID>toggle_contrast(+v:count1)<cr>
 
 function! s:toggle_background()
 	if ! exists('g:colors_name')
@@ -310,12 +313,12 @@ nnoremap <silent> [Window]g  :<C-u>vsplit<CR>
 nnoremap <silent> [Window]t  :tabnew<CR>
 nnoremap <silent> [Window]o  :<C-u>only<CR>
 nnoremap <silent> [Window]b  :b#<CR>
-nnoremap <silent> [Window]c  :close<CR>
-nnoremap <silent> [Window]x  :<C-u>call <SID>BufferEmpty()<CR>
+" nnoremap <silent> [Window]w  :close<CR>
+nnoremap <silent> [Window]w  :<C-u>call <SID>BufferEmpty()<CR>
 
 " Split current buffer, go to previous window and previous buffer
-nnoremap <silent> [Window]sv :split<CR>:wincmd p<CR>:e#<CR>
-nnoremap <silent> [Window]sg :vsplit<CR>:wincmd p<CR>:e#<CR>
+nnoremap <silent> [Window]sj :split<CR>:wincmd p<CR>:e#<CR>
+nnoremap <silent> [Window]sl :vsplit<CR>:wincmd p<CR>:e#<CR>
 
 function! WipeHiddenBuffers()
 	let tpbl=[]
