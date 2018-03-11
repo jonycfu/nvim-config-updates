@@ -33,4 +33,5 @@ augroup viminfoskip
 		\ setlocal viminfo=
 augroup END
 
+let g:elite_mode=1
 " vim: set ts=2 sw=2 tw=80 noet :

@@ -128,11 +128,11 @@ cnoremap <Down> <C-n>
 map <Leader>cd :lcd %:p:h<CR>:pwd<CR>
 
 " Fast saving
-nnoremap <silent><Leader>w :write<CR>
-vnoremap <silent><Leader>w <Esc>:write<CR>
+" nnoremap <silent><Leader>w :write<CR>
+" vnoremap <silent><Leader>w <Esc>:write<CR>
 nnoremap <silent><C-s> :<C-u>write<CR>
-vnoremap <silent><C-s> :<C-u>write<CR>
-cnoremap <silent><C-s> <C-u>write<CR>
+" vnoremap <silent><C-s> :<C-u>write<CR>
+" cnoremap <silent><C-s> <C-u>write<CR>
 
 " Save a file with sudo
 " http://forrst.com/posts/Use_w_to_sudo_write_a_file_with_Vim-uAN
@@ -143,7 +143,7 @@ cmap W!! w !sudo tee % >/dev/null
 " ---------
 
 " I like to :quit with 'q', shrug.
-nnoremap <silent> q :<C-u>:quit<CR>
+nnoremap <silent> qw :<C-u>:quit<CR>
 autocmd MyAutoCmd FileType man nnoremap <silent><buffer> q :<C-u>:quit<CR>
 
 " Macros
@@ -156,16 +156,16 @@ nmap <silent> gh :echo 'hi<'.synIDattr(synID(line('.'), col('.'), 1), 'name')
 	\.synIDattr(synIDtrans(synID(line('.'), col('.'), 1)), 'name').'>'<CR>
 
 " Toggle editor visuals
-nmap <silent> <Leader>ts :setlocal spell!<cr>
-nmap <silent> <Leader>tn :setlocal nonumber!<CR>
-nmap <silent> <Leader>tl :setlocal nolist!<CR>
-nmap <silent> <Leader>th :nohlsearch<CR>
+" nmap <silent> <Leader>ts :setlocal spell!<cr>
+" nmap <silent> <Leader>tn :setlocal nonumber!<CR>
+" nmap <silent> <Leader>tl :setlocal nolist!<CR>
+" nmap <silent> <Leader>th :nohlsearch<CR>
 nmap <silent> <Leader>tw :setlocal wrap! breakindent!<CR>
 
 " Tabs
-nnoremap <silent> g0 :<C-u>tabfirst<CR>
-nnoremap <silent> g$ :<C-u>tablast<CR>
-nnoremap <silent> gr :<C-u>tabprevious<CR>
+" nnoremap <silent> g0 :<C-u>tabfirst<CR>
+" nnoremap <silent> g$ :<C-u>tablast<CR>
+" nnoremap <silent> gr :<C-u>tabprevious<CR>
 nnoremap <silent> <A-j> :<C-U>tabnext<CR>
 nnoremap <silent> <A-k> :<C-U>tabprevious<CR>
 nnoremap <silent> <C-Tab> :<C-U>tabnext<CR>
