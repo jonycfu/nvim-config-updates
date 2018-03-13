@@ -5,6 +5,9 @@
 - repo: pelodelfuego/vim-swoop
 - repo: tpope/vim-surround
 - repo: terryma/vim-multiple-cursors
+- repo: godlygeek/tabular
+
+
 # Icons
 # ==========================================
 - repo: ryanoasis/vim-devicons

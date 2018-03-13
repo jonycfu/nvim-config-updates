@@ -151,9 +151,9 @@ nnoremap Q q
 nnoremap gQ @q
 
 " Show highlight names under cursor
-nmap <silent> gh :echo 'hi<'.synIDattr(synID(line('.'), col('.'), 1), 'name')
-	\.'> trans<'.synIDattr(synID(line('.'), col('.'), 0), 'name').'> lo<'
-	\.synIDattr(synIDtrans(synID(line('.'), col('.'), 1)), 'name').'>'<CR>
+" nmap <silent> gh :echo 'hi<'.synIDattr(synID(line('.'), col('.'), 1), 'name')
+" 	\.'> trans<'.synIDattr(synID(line('.'), col('.'), 0), 'name').'> lo<'
+" 	\.synIDattr(synIDtrans(synID(line('.'), col('.'), 1)), 'name').'>'<CR>
 
 " Toggle editor visuals
 " nmap <silent> <Leader>ts :setlocal spell!<cr>
@@ -240,22 +240,22 @@ nmap <Leader>j :lnext<CR>
 nmap <Leader>k :lprev<CR>
 
 " Duplicate lines
-nnoremap <Leader>d m`YP``
-vnoremap <Leader>d YPgv
+" nnoremap <Leader>d m`YP``
+" vnoremap <Leader>d YPgv
 
 " Source line and selection in vim
-vnoremap <Leader>S y:execute @@<CR>:echo 'Sourced selection.'<CR>
-nnoremap <Leader>S ^vg_y:execute @@<CR>:echo 'Sourced line.'<CR>
+" vnoremap <Leader>S y:execute @@<CR>:echo 'Sourced selection.'<CR>
+" nnoremap <Leader>S ^vg_y:execute @@<CR>:echo 'Sourced line.'<CR>
 
 " Yank buffer's absolute path to X11 clipboard
 nnoremap <Leader>y :let @+=expand("%")<CR>:echo 'Relative path copied to clipboard.'<CR>
 nnoremap <Leader>Y :let @+=expand("%:p")<CR>:echo 'Absolute path copied to clipboard.'<CR>
 
 " Drag current line/s vertically and auto-indent
-vnoremap mk :m-2<CR>gv=gv
-vnoremap mj :m'>+<CR>gv=gv
-noremap  mk :m-2<CR>
-noremap  mj :m+<CR>
+" vnoremap mk :m-2<CR>gv=gv
+" vnoremap mj :m'>+<CR>gv=gv
+" noremap  mk :m-2<CR>
+" noremap  mj :m+<CR>
 
 " Session management shortcuts
 nmap <silent> <Leader>se :<C-u>execute 'SessionSave' fnamemodify(resolve(getcwd()), ':p:gs?/?_?')<CR>
@@ -263,7 +263,7 @@ nmap <silent> <Leader>os :<C-u>execute 'source '.g:session_directory.'/'.fnamemo
 
 if has('mac')
 	" Open the macOS dictionary on current word
-	nmap <Leader>? :!open dict://<cword><CR><CR>
+	" nmap <Leader>? :!open dict://<cword><CR><CR>
 
 	" Use Marked for real-time Markdown preview
 	if executable('/Applications/Marked 2.app/Contents/MacOS/Marked 2')
@@ -272,12 +272,12 @@ if has('mac')
 	endif
 
 	" Use Dash on Mac, for context help
-	if executable('/Applications/Dash.app/Contents/MacOS/Dash')
-		autocmd MyAutoCmd FileType ansible,go,php,css,less,html,markdown
-			\ nmap <silent><buffer> K :!open -g dash://"<C-R>=split(&ft, '\.')[0]<CR>:<cword>"&<CR><CR>
-		autocmd MyAutoCmd FileType javascript,javascript.jsx,sql,ruby,conf,sh
-			\ nmap <silent><buffer> K :!open -g dash://"<cword>"&<CR><CR>
-	endif
+	" if executable('/Applications/Dash.app/Contents/MacOS/Dash')
+	" 	autocmd MyAutoCmd FileType ansible,go,php,css,less,html,markdown
+	" 		\ nmap <silent><buffer> K :!open -g dash://"<C-R>=split(&ft, '\.')[0]<CR>:<cword>"&<CR><CR>
+	" 	autocmd MyAutoCmd FileType javascript,javascript.jsx,sql,ruby,conf,sh
+	" 		\ nmap <silent><buffer> K :!open -g dash://"<cword>"&<CR><CR>
+	" endif
 
 " Use Zeal on Linux for context help
 elseif executable('zeal')
@@ -313,8 +313,8 @@ nnoremap <silent> [Window]g  :<C-u>vsplit<CR>
 nnoremap <silent> [Window]t  :tabnew<CR>
 nnoremap <silent> [Window]o  :<C-u>only<CR>
 nnoremap <silent> [Window]b  :b#<CR>
-" nnoremap <silent> [Window]w  :close<CR>
-nnoremap <silent> [Window]w  :<C-u>call <SID>BufferEmpty()<CR>
+" nnoremap <silent> gw  :close<CR>
+nnoremap <silent> gw  :<C-u>call <SID>BufferEmpty()<CR>
 
 " Split current buffer, go to previous window and previous buffer
 nnoremap <silent> [Window]sj :split<CR>:wincmd p<CR>:e#<CR>

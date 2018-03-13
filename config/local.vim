@@ -14,6 +14,41 @@ if exists('g:loaded_webdevicons')
     call webdevicons#refresh()
 endif
 
+let g:user_emmet_leader_key='<C-Z>'
+let g:user_emmet_mode='a'
+
+""""""""""""""""""""""""""""""
+" => Tabularize plugin
+""""""""""""""""""""""""""""""
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>= :Tabularize /=<CR>
+nmap <Leader>a: :Tabularize /:\zs<CR>
+vmap <Leader>: :Tabularize /:<CR>
+
+
 " Insert line breaks
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
+
+" Resizing xsplits
+nmap wk :resize +10<cr>
+nmap wj :resize -10<cr>
+nmap wh :vertical resize +10<cr>
+nmap wl :vertical resize -10<cr>
+
+" Disable highlight when <leader><cr> is pressed
+map <silent> <leader><cr> :noh<cr>
+
+" Smart way to move between buffers
+noremap gh :bprev<CR>
+noremap gl :bnext<CR>
+
+" Move a line of text using ALT+[jk] or Comamnd+[jk]= [symbol] on mac
+if has('mac')
+  nnoremap <A-k> :m .-2<CR>==
+  nnoremap <A-j> :m .+1<CR>==
+  inoremap <A-j> <Esc>:m .+1<CR>==gi
+  inoremap <A-k> <Esc>:m .-2<CR>==gi
+	vnoremap <A-k> :m '<-2<CR>gv=gv
+	vnoremap <A-j> :m '>+1<CR>gv=gv
+endif
