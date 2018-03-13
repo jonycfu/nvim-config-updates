@@ -62,7 +62,7 @@ nnoremap <silent> <Leader>o   :<C-u>TagbarOpenAutoClose<CR>
 endif
 
 if dein#tap('nerdtree')
-	let g:NERDTreeMapOpenSplit = 'o'
+	let g:NERDTreeMapOpenSplit = 'J'
 	let g:NERDTreeMapOpenVSplit = 'O'
 	let g:NERDTreeMapOpenInTab = 't'
 	let g:NERDTreeMapOpenInTabSilent = 'T'
@@ -83,29 +83,12 @@ if dein#tap('neosnippet.vim')
 	xmap <silent>L     <Plug>(neosnippet_expand_target)
 endif
 
+
 if dein#tap('emmet-vim')
 	autocmd MyAutoCmd FileType html,css,jsx,javascript,javascript.jsx
 		\ EmmetInstall
 		\ | imap <buffer> <C-Return> <Plug>(emmet-expand-abbr)
 endif
-
-" if dein#tap('vim-operator-surround')
-" 	map <silent>sa <Plug>(operator-surround-append)
-" 	map <silent>sd <Plug>(operator-surround-delete)
-" 	map <silent>sr <Plug>(operator-surround-replace)
-" 	nmap <silent>saa <Plug>(operator-surround-append)<Plug>(textobj-multiblock-i)
-" 	nmap <silent>sdd <Plug>(operator-surround-delete)<Plug>(textobj-multiblock-a)
-" 	nmap <silent>srr <Plug>(operator-surround-replace)<Plug>(textobj-multiblock-a)
-" endif
-
-" if dein#tap('vim-operator-replace')
-" 	xmap p <Plug>(operator-replace)
-" endif
-
-" if dein#tap('vim-operator-flashy')
-" 	map y <Plug>(operator-flashy)
-" 	nmap Y <Plug>(operator-flashy)$
-" endif
 
 if dein#tap('vim-niceblock')
 	xmap I  <Plug>(niceblock-I)

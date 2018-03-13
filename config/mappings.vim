@@ -180,7 +180,7 @@ nmap <silent> \\ :execute 'tabn '.g:lasttab<CR>
 " --------------
 
 " Remove spaces at the end of lines
-nnoremap <silent> ,<Space> :<C-u>silent! keeppatterns %substitute/\s\+$//e<CR>
+nnoremap <silent> ;<Space> :<C-u>silent! keeppatterns %substitute/\s\+$//e<CR>
 
 " C-r: Easier search and replace
 xnoremap <C-r> :<C-u>call <SID>get_selection('/')<CR>:%s/\V<C-R>=@/<CR>//gc<Left><Left><Left>
