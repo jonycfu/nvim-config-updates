@@ -7,11 +7,11 @@ set wrap
 set guifont=FuraCode_Nerd_Font:h12
 let g:airline_powerline_fonts = 1
 highlight CursorLine ctermbg=42 guibg=#777777 "rgb=0,215,135
+highlight Visual  guifg=White guibg=LightBlue gui=none
 
 " let g:cursorword_highlight = 0
-autocmd Colorscheme * highlight CursorWord0 ctermbg=189 guibg=#d7d7ff
-autocmd Colorscheme * highlight CursorWord1 ctermbg=189 guibg=#d7d7ff
-
+autocmd Colorscheme * highlight CursorWord0 ctermbg=52 guibg=#5f0000
+autocmd Colorscheme * highlight CursorWord1 ctermbg=37 guibg=#a1d1d1
 let g:elite_mode=1
 
 " after a re-source, fix syntax matching issues (concealing brackets):
@@ -21,6 +21,12 @@ endif
 
 let g:user_emmet_leader_key='<C-Z>'
 let g:user_emmet_mode='a'
+
+" Multi-cursor
+let g:multi_cursor_next_key="\<C-f>"
+
+" Fast save
+noremap gs :wa!<CR>
 
 """"""""""""""""""""""""""""""
 " => Tabularize plugin
