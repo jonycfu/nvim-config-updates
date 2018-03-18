@@ -3,9 +3,14 @@ let g:python_host_prog = '/usr/local/opt/python@2/bin/python2'
 set clipboard=unnamed
 set wrap
 
+" Font-related
 set guifont=FuraCode_Nerd_Font:h12
 let g:airline_powerline_fonts = 1
-" highlight! CursorLine ctermfg=42 guifg=#00d787 "rgb=0,215,135
+highlight CursorLine ctermbg=42 guibg=#777777 "rgb=0,215,135
+
+" let g:cursorword_highlight = 0
+autocmd Colorscheme * highlight CursorWord0 ctermbg=189 guibg=#d7d7ff
+autocmd Colorscheme * highlight CursorWord1 ctermbg=189 guibg=#d7d7ff
 
 let g:elite_mode=1
 
