@@ -89,12 +89,12 @@ call neocomplete#custom#source('_', 'converters',
 let g:neocomplete#fallback_mappings = [ "\<C-x>\<C-o>", "\<C-x>\<C-n>" ]
 
 " Movement within 'ins-completion-menu'
-imap <expr><C-j>   pumvisible() ? "\<C-n>" : "\<C-j>"
-imap <expr><C-k>   pumvisible() ? "\<C-p>" : "\<C-k>"
-imap <expr><C-f>   pumvisible() ? "\<PageDown>" : "\<Right>"
-imap <expr><C-b>   pumvisible() ? "\<PageUp>" : "\<Left>"
-imap <expr><C-d>   pumvisible() ? "\<PageDown>" : "\<Right>"
-imap <expr><C-u>   pumvisible() ? "\<PageUp>" : "\<Left>"
+" imap <expr><C-j>   pumvisible() ? "\<C-n>" : "\<C-j>"
+" imap <expr><C-k>   pumvisible() ? "\<C-p>" : "\<C-k>"
+" imap <expr><C-f>   pumvisible() ? "\<PageDown>" : "\<Right>"
+" imap <expr><C-b>   pumvisible() ? "\<PageUp>" : "\<Left>"
+" imap <expr><C-d>   pumvisible() ? "\<PageDown>" : "\<Right>"
+" imap <expr><C-u>   pumvisible() ? "\<PageUp>" : "\<Left>"
 
 " <C-n>: neocomplete.
 imap <expr> <C-n>  pumvisible() ? "\<C-n>" : "\<C-x>\<C-u>\<C-p>\<Down>"
@@ -107,7 +107,7 @@ inoremap <expr><C-l>  neocomplete#mappings#refresh()
 inoremap <expr><C-g>   neocomplete#undo_completion()
 
 " Start file completion TODO Not working all the time
-imap <silent><expr> <C-x><C-f> neocomplete#start_manual_complete('file')
+" imap <silent><expr> <C-x><C-f> neocomplete#start_manual_complete('file')
 
 " <CR>: If popup menu visible, expand snippet or close popup with selection,
 "       Otherwise, check if within empty pair and use delimitMate.

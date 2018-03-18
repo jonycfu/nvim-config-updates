@@ -141,10 +141,10 @@ imap <expr><C-j>   pumvisible() ? "\<Down>" : "\<C-j>"
 imap <expr><C-k>   pumvisible() ? "\<Up>" : "\<C-k>"
 
 " Scroll pages in menu
-inoremap <expr><C-f> pumvisible() ? "\<PageDown>" : "\<Right>"
-inoremap <expr><C-b> pumvisible() ? "\<PageUp>" : "\<Left>"
-imap     <expr><C-d> pumvisible() ? "\<PageDown>" : "\<C-d>"
-imap     <expr><C-u> pumvisible() ? "\<PageUp>" : "\<C-u>"
+" inoremap <expr><C-f> pumvisible() ? "\<PageDown>" : "\<Right>"
+" inoremap <expr><C-b> pumvisible() ? "\<PageUp>" : "\<Left>"
+" imap     <expr><C-d> pumvisible() ? "\<PageDown>" : "\<C-d>"
+" imap     <expr><C-u> pumvisible() ? "\<PageUp>" : "\<C-u>"
 
 " Undo completion
 " inoremap <expr><C-g> deoplete#undo_completion()
