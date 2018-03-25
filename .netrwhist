@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/merlin/.config/nvim'
+let g:netrw_dirhist_2='/Users/merlin/.config/nvim/plugin'
+let g:netrw_dirhist_3='/Users/merlin/.config/nvim'
+let g:netrw_dirhist_4='/Users/merlin/.config/nvim/config'

@@ -6,12 +6,13 @@ set wrap
 " Font-related
 set guifont=FuraCode_Nerd_Font:h12
 let g:airline_powerline_fonts = 1
-highlight CursorLine ctermbg=42 guibg=#777777 "rgb=0,215,135
+highlight CursorLine ctermbg=16 guibg=azure
 highlight Visual  guifg=White guibg=LightBlue gui=none
 
 " let g:cursorword_highlight = 0
-autocmd Colorscheme * highlight CursorWord0 ctermbg=52 guibg=#5f0000
-autocmd Colorscheme * highlight CursorWord1 ctermbg=37 guibg=#a1d1d1
+autocmd Colorscheme * highlight CursorWord0 ctermbg=121 guibg=palegreen
+autocmd Colorscheme * highlight CursorWord1 ctermbg=213 guibg=springgreen4
+
 let g:elite_mode=1
 
 " after a re-source, fix syntax matching issues (concealing brackets):
@@ -19,7 +20,7 @@ if exists('g:loaded_webdevicons')
     call webdevicons#refresh()
 endif
 
-let g:user_emmet_leader_key='<C-Z>'
+" let g:user_emmet_leader_key='<C-Z>'
 let g:user_emmet_mode='a'
 
 " Multi-cursor

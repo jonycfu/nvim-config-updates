@@ -2,9 +2,8 @@
 # MY PLUGINS
 # ==========================================
 - repo: wincent/terminus
-- repo: pelodelfuego/vim-swoop
+# - repo: pelodelfuego/vim-swoop
 - repo: tpope/vim-surround
-- repo: terryma/vim-multiple-cursors
 - repo: godlygeek/tabular
 
 

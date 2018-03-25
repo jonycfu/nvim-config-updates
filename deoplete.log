@@ -1,0 +1,17 @@
+2018-03-25 14:32:57,342 INFO     [23301] (deoplete.logging) --- Deoplete Log Start ---
+2018-03-25 14:32:57,343 INFO     [23301] (deoplete.logging) NVIM v0.2.2, Python 3.6.4, neovim client 0.2.4
+2018-03-25 14:33:01,399 DEBUG    [23301] (deoplete.core) completion_begin: "
+2018-03-25 14:33:01,411 DEBUG    [23301] (deoplete.core) on_event: InsertEnter
+2018-03-25 14:33:01,506 DEBUG    [23301] (deoplete.core) completion_begin: "
+2018-03-25 14:33:01,509 DEBUG    [23301] (deoplete.core) completion_end: "
+2018-03-25 14:33:19,829 DEBUG    [23301] (deoplete.core) on_event: BufWritePost
+2018-03-25 14:33:22,226 DEBUG    [23301] (deoplete.core) on_event: BufWritePost
+2018-03-25 14:33:23,882 DEBUG    [23301] (deoplete.core) on_event: BufWritePost
+2018-03-25 14:33:25,928 DEBUG    [23301] (deoplete.core) on_event: BufWritePost
+2018-03-25 14:33:27,680 DEBUG    [23301] (deoplete.core) on_event: BufWritePost
+2018-03-25 14:33:29,284 DEBUG    [23301] (deoplete.core) on_event: BufWritePost
+2018-03-25 14:33:30,976 DEBUG    [23301] (deoplete.core) on_event: BufWritePost
+2018-03-25 14:33:32,668 DEBUG    [23301] (deoplete.core) on_event: BufWritePost
+2018-03-25 14:33:35,614 DEBUG    [23301] (deoplete.core) on_event: BufWritePost
+2018-03-25 14:33:55,107 DEBUG    [23301] (deoplete.core) on_event: BufRead
+2018-03-25 14:34:34,047 DEBUG    [23301] (deoplete.core) on_event: VimLeavePre

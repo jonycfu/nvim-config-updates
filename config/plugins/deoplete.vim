@@ -1,14 +1,14 @@
 " deoplete for nvim
 " ---
 
-" let g:deoplete#enable_profile = 1
-" call deoplete#enable_logging('DEBUG', 'deoplete.log')<CR>
-" call deoplete#custom#source('tern', 'debug_enabled', 1)<CR>
+let g:deoplete#enable_profile = 1
+call deoplete#enable_logging('DEBUG', 'deoplete.log')<CR>
+call deoplete#custom#source('tern', 'debug_enabled', 1)<CR>
 
 " General settings " {{{
 " ---
-" let g:deoplete#auto_complete_delay = 50  " Default is 50
-" let g:deoplete#auto_refresh_delay = 500  " Default is 500
+let g:deoplete#auto_complete_delay = 50  " Default is 50
+let g:deoplete#auto_refresh_delay = 500  " Default is 500
 let g:deoplete#enable_refresh_always = 0
 let g:deoplete#enable_camel_case = 1
 let g:deoplete#max_abbr_width = 35
@@ -40,11 +40,11 @@ call deoplete#custom#source('_', 'min_pattern_length', 2)
 
 let g:deoplete#sources = get(g:, 'deoplete#sources', {})
 let g:deoplete#sources.go = ['vim-go']
-" let g:deoplete#sources.javascript = ['file', 'ternjs']
-" let g:deoplete#sources.jsx = ['file', 'ternjs']
+let g:deoplete#sources.javascript = ['file', 'ternjs']
+let g:deoplete#sources.jsx = ['file', 'ternjs']
 
 let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
-" let g:deoplete#ignore_sources.html = ['syntax']
+let g:deoplete#ignore_sources.html = ['syntax']
 " let g:deoplete#ignore_sources.python = ['syntax']
 " let g:deoplete#ignore_sources.php = ['omni']
 
@@ -53,20 +53,20 @@ let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
 " }}}
 " Omni functions and patterns " {{{
 " ---
-" let g:deoplete#keyword_patterns = {}
-" let g:deoplete#keyword_patterns._ = '[a-zA-Z_]\k*\(?'
+let g:deoplete#keyword_patterns = {}
+let g:deoplete#keyword_patterns._ = '[a-zA-Z_]\k*\(?'
 
 let g:deoplete#omni#functions = get(g:, 'deoplete#omni#functions', {})
 let g:deoplete#omni#functions.css = 'csscomplete#CompleteCSS'
 let g:deoplete#omni#functions.html = 'htmlcomplete#CompleteTags'
 let g:deoplete#omni#functions.markdown = 'htmlcomplete#CompleteTags'
-" let g:deoplete#omni#functions.javascript =
-"	\ [ 'tern#Complete', 'jspc#omni', 'javascriptcomplete#CompleteJS' ]
+ let g:deoplete#omni#functions.javascript =
+	\ [ 'tern#Complete', 'jspc#omni', 'javascriptcomplete#CompleteJS' ]
 
 let g:deoplete#omni_patterns = get(g:, 'deoplete#omni_patterns', {})
 let g:deoplete#omni_patterns.html = '<[^>]*'
-" let g:deoplete#omni_patterns.javascript = '[^. *\t]\.\w*'
-" let g:deoplete#omni_patterns.javascript = '[^. \t]\.\%\(\h\w*\)\?'
+let g:deoplete#omni_patterns.javascript = '[^. *\t]\.\w*'
+let g:deoplete#omni_patterns.javascript = '[^. \t]\.\%\(\h\w*\)\?'
 let g:deoplete#omni_patterns.php =
 	\ '\h\w*\|[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
 

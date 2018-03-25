@@ -83,6 +83,12 @@ if dein#tap('neosnippet.vim')
 	xmap <silent>L     <Plug>(neosnippet_expand_target)
 endif
 
+if dein#tap('emmet-vim')
+	autocmd MyAutoCmd FileType hbs, html,css,jsx,javascript,javascript.jsx
+		\ EmmetInstall
+		\ | imap <buffer> <C-Return> <Plug>(emmet-expand-abbr)
+endif
+
 if dein#tap('vim-niceblock')
 	xmap I  <Plug>(niceblock-I)
 	xmap A  <Plug>(niceblock-A)
